@@ -173,16 +173,20 @@ $hasil_voucher = json_decode($voucher, true);
 
 /* MULAI DARI SINI BRO */
 //
-$data = $hasil_voucher['data'];
+$data = $hasil_voucher['data']['content'];
 if ($data == null){
     echo "delay : 1".PHP_EOL;
 sleep(3);
+$voucher = dapet($url_redem, $headers);
+$hasil_voucher = json_decode($voucher, true);
 }
 
 $data = $hasil_voucher['data']['content'];
 if ($data == null){
     echo "delay : 2".PHP_EOL;
-    sleep(15);
+    sleep(10);
+    $voucher = dapet($url_redem, $headers);
+    $hasil_voucher = json_decode($voucher, true);
 }
 
 $data = $hasil_voucher['data']['content'];
@@ -279,13 +283,14 @@ $kupon_5 = [
 $kupon_5 = implode(" | ", $kupon_5);
 //
 $file = fopen("indomart.txt","a");  
-// fwrite($file,"$kupon_0".PHP_EOL);
-// fwrite($file,"$kupon_1".PHP_EOL);
-// fwrite($file,"$kupon_2".PHP_EOL);
-// fwrite($file,"$kupon_3".PHP_EOL);
-// fwrite($file,"$kupon_4".PHP_EOL);
+fwrite($file,"--------------------------------------------------------".PHP_EOL);
+fwrite($file,"$kupon_0".PHP_EOL);
+fwrite($file,"$kupon_1".PHP_EOL);
+fwrite($file,"$kupon_2".PHP_EOL);
+fwrite($file,"$kupon_3".PHP_EOL);
+fwrite($file,"$kupon_4".PHP_EOL);
 fwrite($file,"$kupon_5".PHP_EOL);
-// fwrite($file,"$kupon_6".PHP_EOL);
+fwrite($file,"$kupon_6".PHP_EOL);
 fwrite($file,"========================================================".PHP_EOL);
 fwrite($file,"Nomor HP : $phone".PHP_EOL);
 fwrite($file,"========================================================".PHP_EOL);
