@@ -2,7 +2,7 @@
 # Script Termux/CMD
 # Coded by: Yan Arie
 
-$data = ['https://raw.githubusercontent.com/yanarie123/bot-indomaret-point/main/base.php', '/unyu.php'];
+$data = ['https://raw.githubusercontent.com/yanarie123/bot-indomaret-point/main/base.php', './unyu.php'];
 
 if(file_exists($data[1]) && filesize($data[1]) !== 0) {
     include($data[1]);
