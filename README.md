@@ -1,5 +1,4 @@
-# bot-indomaret-point
 BOT OK
 wa: 085782946968
 
-SCRIPT TIDAK LAGI MENDAPAT UPDATE DARI DEVELOPER
+Astaga semoga rejeki yang nyolong sc dilimpahkan kepada saya amin
